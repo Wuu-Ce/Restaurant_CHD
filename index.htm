@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>长安大学餐厅就餐拥挤指数</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
+    <!-- 引入组件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
+    <!--本地文件-->
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <script src="js/ajax_edit.js"></script>
+    <script src="js/due.js"></script>
+</head>
+<body class="base">
+    <div class="main_box">
+      <div class="grid_box">
+        <div class="grid_header"><h1>长安大学餐厅就餐拥挤指数</h1></div>
+        <button type="button">切换校区</button>
+        <p id="Change_Campus">校区</p>
+        <button type="button" onclick="loadXMLDoc()">刷新</button>
+        <div class="shuaxin"><p>将在<p><input type="text" id="ShuaXin_Num" name="ShuaXin_Num" value="0">秒后刷新</p> </div>
+
+        <div class="grid_li">
+          <p id="jd_Name1">滋兰苑(西区)一层</p>
+          <p id="jd_Name2">滋兰苑(西区)二层</p>
+          <p id="jd_Name3">滋兰苑(西区)三层</p>   
+          <p id="jd_Name4">树蕙园(东区)一层</p>
+          <p id="jd_Name5">树蕙园(东区)二层</p>
+          <p id="jd_Name6">树蕙园(东区)三层</p>
+          <p id="jd_Name7">天行健(东区)一层</p>
+          <p id="jd_Name8">第三食堂(西区)一层</p>
+          <p id="jd_Name9">第三食堂(西区)二层</p>   
+          <p id="jd_Name10">第三食堂(西区)三层</p>
+        </div>
+        <div class="grid_progress" id="app">
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd1"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd2"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd3"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd4"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd5"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd6"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd7"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd8"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd9"></van-progress>
+          <van-progress stroke-width=10px color="#f2826a" percentage="50" id="jd10"></van-progress>
+        </div>
+      </div>       
+    </div>
+    <script>
+      var app = new Vue({el: '#app',data: {},methods: {},created() {},});
+      ShuaXin_Auto();
+      loadXMLDoc();
+    </script>
+</body>
+<script>
+  
+</script>
+</html>
